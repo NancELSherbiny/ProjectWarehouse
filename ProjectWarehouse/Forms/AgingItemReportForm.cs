@@ -22,13 +22,12 @@ namespace ProjectWarehouse.Forms
 
         private void btn_view_Click(object sender, EventArgs e)
         {
-            WarehouseComboBox.DataSource = db.Warehouses.ToList();
-            WarehouseComboBox.DisplayMember = "Name";
-            WarehouseComboBox.ValueMember = "ID";
-        }
+            if (WarehouseComboBox.SelectedValue == null)
+            {
+                MessageBox.Show("Please select a warehouse.");
+                return;
+            }
 
-        private void AgingItemReportForm_Load(object sender, EventArgs e)
-        {
             int threshold = (int)numericUpDown1.Value;
             DateTime thresholdDate = DateTime.Now.AddDays(-threshold);
             int warehouseId = (int)WarehouseComboBox.SelectedValue;
@@ -46,6 +45,13 @@ namespace ProjectWarehouse.Forms
                              };
 
             dataGridView1.DataSource = agingItems.ToList();
+        }
+
+        private void AgingItemReportForm_Load(object sender, EventArgs e)
+        {
+            WarehouseComboBox.DataSource = db.Warehouses.ToList();
+            WarehouseComboBox.DisplayMember = "Name";
+            WarehouseComboBox.ValueMember = "ID";
         }
     }
 }
