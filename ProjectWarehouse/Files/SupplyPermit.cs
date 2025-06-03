@@ -26,7 +26,6 @@ namespace ProjectWarehouse.Files
         public virtual Supplier Supplier { get; set; }
         public DateTime Date { get; set; }
 
-        public ICollection<SupplyPermitItem> supplyPermitItems { get; set; } // Collection of items in the supply permit
-
+        public ICollection<SupplyPermitItem> supplyPermitItems { get; set; } 
     }
 }

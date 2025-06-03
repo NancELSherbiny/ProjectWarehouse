@@ -14,7 +14,7 @@ namespace ProjectWarehouse
         public ItemForm()
         {
             InitializeComponent();
-            SeedItemUnits(); // Optional: to ensure units exist
+            SeedItemUnits(); 
             LoadItemUnits();
             LoadItems();
         }

@@ -28,8 +28,7 @@ namespace ProjectWarehouse.Files
         [ForeignKey("Supplier")]
         public int SID { get; set; }
         public virtual Supplier Supplier { get; set; }
-        public DateTime Date { get; set; } // Date of the transfer
-        public ICollection<TransferItem> TransferItems { get; set; } // Collection of items in the transfer
-
+        public DateTime Date { get; set; } 
+        public ICollection<TransferItem> TransferItems { get; set; } 
     }
 }

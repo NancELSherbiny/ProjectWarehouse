@@ -15,15 +15,15 @@ namespace ProjectWarehouse.Files
             withdrawPermitItems = new HashSet<WithdrawPermitItem>();
         }
         [Key]
-        public int ID { get; set; } // Withdraw Permit ID
+        public int ID { get; set; } 
         [ForeignKey("Warehouse")]
-        public int WID { get; set; } // Warehouse ID
-        public virtual Warehouse Warehouse { get; set; } // Navigation property to Warehouse
+        public int WID { get; set; } 
+        public virtual Warehouse Warehouse { get; set; } 
         [ForeignKey("Client")]
-        public int CID { get; set; } // Client ID
-        public virtual Client Client { get; set; } // Navigation property to Client
-        public DateTime Date { get; set; } // Date of the withdraw permit
-        public ICollection<WithdrawPermitItem> withdrawPermitItems { get; set; } // Collection of items in the withdraw permit
+        public int CID { get; set; }
+        public virtual Client Client { get; set; } 
+        public DateTime Date { get; set; } 
+        public ICollection<WithdrawPermitItem> withdrawPermitItems { get; set; } 
 
     }
 }

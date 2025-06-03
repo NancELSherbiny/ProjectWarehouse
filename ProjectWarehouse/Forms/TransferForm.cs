@@ -119,16 +119,13 @@ namespace ProjectWarehouse.Forms
                 return;
             }
 
-            // Update the base transfer data
             transfer.FromW = (int)FromComboBox.SelectedValue;
             transfer.ToW = (int)ToComboBox.SelectedValue;
             transfer.SID = (int)SupplierComboBox.SelectedValue;
             transfer.Date = DateTime.Now;
 
-            // Remove old items
             db.TransferItems.RemoveRange(transfer.TransferItems);
 
-            // Add new updated items
             foreach (var item in currentItems)
             {
                 item.TransferID = transfer.ID;

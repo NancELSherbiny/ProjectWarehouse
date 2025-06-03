@@ -75,11 +75,11 @@ namespace ProjectWarehouse.Forms
             };
 
             db.SupplyPermits.Add(permit);
-            db.SaveChanges(); // Get ID
+            db.SaveChanges(); 
 
             foreach (var item in currentItems)
             {
-                item.SPID = permit.ID; // ✅ use SPID not ID!
+                item.SPID = permit.ID; 
                 db.SupplyPermitItems.Add(item);
             }
 
@@ -113,10 +113,8 @@ namespace ProjectWarehouse.Forms
             permit.SID = (int)SupplierComboBox.SelectedValue;
             permit.Date = DateTime.Now;
 
-            // Remove existing items
             db.SupplyPermitItems.RemoveRange(permit.supplyPermitItems);
 
-            // Add current items to permit
             foreach (var item in currentItems)
             {
                 item.SPID = permit.ID;

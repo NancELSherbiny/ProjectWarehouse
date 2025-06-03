@@ -24,7 +24,7 @@ namespace ProjectWarehouse
 
         public void LoadWarehouses()
         {
-            WarehouseListBox.Items.Clear(); // Clear first
+            WarehouseListBox.Items.Clear();
             WarehouseListBox.Items.Add(
                 $"{"ID".PadRight(5)}{"Name".PadRight(20)}{"Location".PadRight(20)}{"Manager".PadRight(20)}");
 
@@ -39,13 +39,13 @@ namespace ProjectWarehouse
             {
                 WarehouseListBox.Items.Add(
                     $"{warehouse.ID.ToString().PadRight(5)}{warehouse.Name.PadRight(20)}{warehouse.Location.PadRight(20)}{warehouse.Manager.PadRight(20)}");
-                WarehouseComboBox.Items.Add(warehouse.ID); // Add ID to comboBox for selection
+                WarehouseComboBox.Items.Add(warehouse.ID); 
             }
         }
 
         private void btn_display_Click(object sender, EventArgs e)
         {
-            LoadWarehouses(); // Refresh data in listBox
+            LoadWarehouses(); 
             MessageBox.Show("Data Refreshed!", "Display");
         }
 

@@ -20,9 +20,9 @@ namespace ProjectWarehouse.Files
         [ForeignKey("Item")]
         public int IID { get; set; }
         public virtual Item Item { get; set; }
-        public int Quantity { get; set; } // Quantity of the item in the transfer
-        public DateTime ProductionDate { get; set; } // Production date of the item in the transfer
-        public DateTime ExpiryDate { get; set; } // Expiry date of the item in the transfer
+        public int Quantity { get; set; } 
+        public DateTime ProductionDate { get; set; } 
+        public DateTime ExpiryDate { get; set; } 
 
     }
 }

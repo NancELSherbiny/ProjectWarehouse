@@ -10,15 +10,15 @@ namespace ProjectWarehouse.Files
 {
     class SupplyPermitItem
     {
-       [Key] public int ID { get; set; } // Unique identifier for the supply permit item
+       [Key] public int ID { get; set; } 
         [ForeignKey("SupplyPermit")]
-        public int SPID { get; set; } // Supply Permit ID
-        public virtual SupplyPermit SupplyPermit { get; set; } // Navigation property to SupplyPermit
-       [ForeignKey("item")] public int ItemID { get; set; } // Item ID
-        public virtual Item Item { get; set; } // Navigation property to Item
-        public int Quantity { get; set; } // Quantity of the item in the supply permit
+        public int SPID { get; set; } 
+        public virtual SupplyPermit SupplyPermit { get; set; } 
+       [ForeignKey("item")] public int ItemID { get; set; } 
+        public virtual Item Item { get; set; } 
+        public int Quantity { get; set; } 
         public DateTime ProductionDate { get; set; }
-        public DateTime ExpiryDate { get; set; } // Expiry date of the item in the supply permit
+        public DateTime ExpiryDate { get; set; } 
        
 
     }

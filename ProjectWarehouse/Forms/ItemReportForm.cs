@@ -17,7 +17,6 @@ namespace ProjectWarehouse.Forms
 
         private void ItemReportForm_Load(object sender, EventArgs e)
         {
-            // Fix: Make sure to include the ID for ValueMember
             var itemReport = db.Items
                 .Select(item => new
                 {
